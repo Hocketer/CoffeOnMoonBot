@@ -1,13 +1,13 @@
 const mineflayer = require('mineflayer');
-const gameusername = `CoffeOnMoon`;
-const bossName = `Hocketer`;
-const portal = `53906`
+const gameusername = `CoffeOnMoon`; //Name of the bot
+const bossName = ``; //Name of the palyer
+const portal = ``//port of the server
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const GoalFollow = goals.GoalFollow
 
 const server = {
 	address: "localhost",
-	version: "1.16.5",
+	version: "1.16.5", //Version of the Minecraft
     port: `${portal}`,
 };
 
@@ -21,6 +21,8 @@ let bot = mineflayer.createBot({
 bot.on('kicked', (reason, loggedIn) => console.log(reason, loggedIn));
 bot.on('error', err => console.log(err));
 
+
+//Attack others players
 function lookAtNearestPlayer () {
     const playerFilter = (entity) => entity.type === 'player'
     const playerEntity = bot.nearestEntity(playerFilter)
@@ -37,6 +39,7 @@ function lookAtNearestPlayer () {
   
   bot.on('physicTick', lookAtNearestPlayer)
 
+//Follow player (boss)
   bot.loadPlugin(pathfinder)
   
     function followPlayer() {
