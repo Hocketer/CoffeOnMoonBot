@@ -1,2 +1,3 @@
 # CoffeOnMoonBot
-This is a minecraft bot created using minflayer in js
+This is a minecraft bot created using mineflayer library, this bot follow the boos(player with created the code) and attack others players.
+You need modify the code to use the bot...
