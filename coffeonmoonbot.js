@@ -1,6 +1,6 @@
 const mineflayer = require('mineflayer');
 const gameusername = `CoffeOnMoon`; //Name of the bot
-const bossName = ``; //Name of the palyer
+const bossName = ``; //Name of the player
 const portal = ``//port of the server
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const GoalFollow = goals.GoalFollow
